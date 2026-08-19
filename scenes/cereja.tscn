@@ -50,3 +50,5 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1930229020]
 shape = SubResource("Circle_cereja")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

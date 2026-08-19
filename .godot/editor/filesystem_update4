@@ -6,3 +6,5 @@ res://scenes/cereja.tscn
 res://scenes/inimigo.tscn
 res://scripts/main_menu.gd
 res://scenes/main_menu.tscn
+res://scripts/placa.gd
+res://scenes/placa.tscn
