@@ -1,23 +1,27 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://hny4j5jocr73"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_scr"]
+[ext_resource type="Script" uid="uid://lxwrckyo0k7t" path="res://scripts/main_menu.gd" id="1_scr"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=572571128]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_scr")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=2024030762]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0.12, 0.14, 0.2, 1)
 
-[node name="VBox" type="VBoxContainer" parent="."]
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1767139546]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -32,18 +36,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="Title" type="Label" parent="VBox"]
+[node name="Title" type="Label" parent="VBox" unique_id=887956158]
 layout_mode = 2
 text = "PLATAFORMA"
 horizontal_alignment = 1
 
-[node name="StartButton" type="Button" parent="VBox"]
+[node name="StartButton" type="Button" parent="VBox" unique_id=892336911]
 layout_mode = 2
 text = "Iniciar"
 
-[node name="QuitButton" type="Button" parent="VBox"]
+[node name="QuitButton" type="Button" parent="VBox" unique_id=839853858]
 layout_mode = 2
 text = "Sair"
 
+[connection signal="pressed" from="VBox/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBox/StartButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBox/QuitButton" to="." method="_on_quit_pressed"]

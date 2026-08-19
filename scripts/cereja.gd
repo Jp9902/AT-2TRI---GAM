@@ -6,3 +6,11 @@ func _on_body_entered(body: Node2D) -> void:
 		GameManager.add_point()
 		body.brilhar()
 		queue_free()
+
+
+func _on_animated_sprite_2d_editor_state_changed() -> void:
+	pass # Replace with function body.
+
+
+func _on_animated_sprite_2d_item_rect_changed() -> void:
+	pass # Replace with function body.
