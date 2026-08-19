@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="10_killzone"]
 [ext_resource type="PackedScene" uid="uid://cehldju8r0g0w" path="res://scenes/hud.tscn" id="11_hud"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="12_pause"]
+[ext_resource type="Texture2D" uid="uid://de5rb5wujlsrc" path="res://artes/Personagem e Inimigos/eagle/Sprites/attack/eagle-attack-1.png" id="13_64w2a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4msk"]
+radius = 20.0
 
 [node name="Level" type="Node2D" unique_id=1324155158]
 
@@ -73,7 +77,7 @@ offset_right = -136.0
 offset_bottom = -63.0
 
 [node name="Inimigo" parent="." unique_id=1651378193 instance=ExtResource("9_inimigo")]
-position = Vector2(936, 178)
+position = Vector2(935, 178)
 
 [node name="Killzone" parent="." unique_id=1988151611 instance=ExtResource("10_killzone")]
 position = Vector2(640, 300)
@@ -83,5 +87,19 @@ position = Vector2(640, 300)
 [node name="PauseMenu" parent="." unique_id=782692046 instance=ExtResource("12_pause")]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=575571316]
+
+[node name="INIMIGO2" type="CharacterBody2D" parent="." unique_id=2070503086]
+
+[node name="Sprite2D" type="Sprite2D" parent="INIMIGO2" unique_id=1783972884]
+position = Vector2(559, 108)
+texture = ExtResource("13_64w2a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="INIMIGO2" unique_id=1438712159]
+position = Vector2(557, 108)
+shape = SubResource("CircleShape2D_r4msk")
+
+[node name="RayCast2D" type="RayCast2D" parent="INIMIGO2" unique_id=17371854]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="INIMIGO2" unique_id=1125018365]
 
 [editable path="Placa"]
